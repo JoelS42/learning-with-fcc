@@ -5,36 +5,83 @@
         <meta name="author" content="Joel Schimek">
         <meta name="description" content="This page contains all the things i am learning how to create as i learn HTML.">
         <title>My First Web Page</title>
-        <link rel="icon" href="html5.png" type="image/x-icon">
+        <link rel="icon" href="html5.png" type="image/x-icon">    <!--relative reference-->
         <link rel="stylesheet" href="main.css" type="text/css">
     </head>
 <body>
-    <h1>Hello World!</h1>
+    <header>
+        <h1>My Goals for the Year</h1>
+        <nav aria-label="primary-navigation">
+        <ul>
+            <li>
+                <a href="#html">Learning HTML</a>
+            </li>
+            <li>
+                <a href="#vacation">Planning a Vacation</a>
+            </li>
+        </ul>
+        </nav>
+    </header>
     <hr>
-    <h2>I'm Ready to Learn HTML</h2>
+    <main>
+    <article id="html">
+        <h2>I'm Ready to Learn HTML</h2>
         <p>This is my first web page.</p>
-    <h3>My Daily Schedule</h3>
+        <section>
+            <h3>HTML5</h3>
+        <img src="html5.png" alt="html5-logo" title="I am learning HTML5">
+        </section>
+        <section>
+        <h3>My Daily Schedule</h3>
         <p>Let me tell you how:</p>
         <ol>
             <li>...I learn more about web dev.  <!-- &nbsp; creates space. --></li>
             <li>...I plan out my schedule.</li>
-            <li>...I use resources from <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org/de/">MDN</a></abbr>.</li>
+            <li>...I use resources from <abbr title="Mozilla Developer Network"><a href="https://developer.mozilla.org/de/">MDN</a></abbr>.</li>   <!--absolute reference-->
         </ol>
+        <aside>
+            <details>
+                <summary>
+                    Guess the number of hours i code per day
+                </summary>
+                <p>I start at 8 am and i write code for 3 hours every morning.</p>
+            </details>
+        </aside>
+        </section>
+    </article>
     <hr>
-    <h2>I Am Also Planning a Vacation</h2>
+    <article id="vacation">
+        <h2>I Am Also Planning a Vacation</h2>
         <p>I've been working hard and <em>really need a getaway.</em></p>
         <p>I live in <abbr title="Bundesland: Hessen">Germany</abbr> so i want to visit a beach.</p>
 
     <h3>Places I'd Like to Visit</h3>
         <ul>
-            <li><p>I've heard good things about the caribbean.</p></li>
-            <li><p>I've heard good things about going here:</p>
+            <li>
+                <p>I've heard good things about the caribbean.</p>
+            </li>
+            <figure>
+            <img src="images/beach-g685a51ae1_1920.jpg" alt="caribbean" width="400" height="200" title="I want to visit this beach." loading="lazy">
+                <figcaption>
+                    Caribbean Beach Getaway
+                </figcaption>
+            </figure>
+            <li>
+                <p>I've heard good things about going here:</p>
             <address>
-            Margaritaville Island Reserve Riviera Cancun<br>
-            Bahia Petempich Puerto Morelos, Mexico<br>
-            Colonia Morelos, Mexico 77580
-            </address></li>
+                Margaritaville Island Reserve Riviera Cancun<br>
+                Bahia Petempich Puerto Morelos, Mexico<br>
+                Colonia Morelos, Mexico 77580
+            </address>
+            <figure>
+            <img src="images/beach-gac3d00245_1920.jpg" alt="Margaritaville Island Reserve Riviera Cancun" width="400" height="200" loading="lazy" title="Mexico Beach is very nice!">
+                <figcaption>
+                    Margaritaville Island Reserve Riviera Cancun
+                </figcaption>
+            </figure>
+            </li>
         </ul>
+    <!--TODO: Add more places-->
     <h3>Places I want to avoid:</h3>
         <dl>                          <!--dl = description list, dt= description therm, dd = description details-->
             <dt>North Pole</dt>
@@ -44,8 +91,17 @@
             <dt>Mountain Tops</dt>
             <dd>These are also cold.</dd>
         </dl>
+    </article>
+    </main>
     <hr>
-    &lt;&lt;&lt; &copy; Joel Schimek &gt;&gt;&gt;
+    <footer>
+    <p>
+        &lt;&lt;&lt; &copy; <a href="about.html">Joel Schimek</a> &gt;&gt;&gt;
+    </p>
      <!-- &lt; means less than, &copy; means Copyright, &gt; means greater than -->
+    <p>
+        	<a href="#">Back to Top</a>
+    </p>
+    </footer>
 </body>
 </html>
